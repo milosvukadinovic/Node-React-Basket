@@ -58602,7 +58602,6 @@ var Cart = function Cart(_ref) {
   };
 
   var callCheckOut = function callCheckOut() {
-    console.log(products);
     var data = [];
     products.forEach(function (element) {
       data.push({ sku: element.sku, amount: element.amount });
@@ -58617,7 +58616,6 @@ var Cart = function Cart(_ref) {
         setTitle("Failed Checkout");
         setPage("err");
       } else {
-        console.log(response);
         setTitle("Successful Checkout");
         setPage("suc");
       }

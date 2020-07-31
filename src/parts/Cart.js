@@ -66,7 +66,6 @@ const Cart = ({
   };
 
   const callCheckOut = () => {
-    console.log(products);
     let data = [];
     products.forEach((element) => {
       data.push({ sku: element.sku, amount: element.amount });
@@ -83,7 +82,6 @@ const Cart = ({
           setTitle("Failed Checkout");
           setPage("err");
         } else {
-          console.log(response);
           setTitle("Successful Checkout");
           setPage("suc");
         }
