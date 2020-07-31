@@ -18,8 +18,22 @@ const addToCartUnsafe = productId => ({
 })
 
 export const addToCart = productId => (dispatch, getState) => {
-    dispatch(addToCartUnsafe(productId))
+    if(productId != undefined && productId != 'undefined'){
+      dispatch(addToCartUnsafe(productId))
+    }
+    
 }
+
+export const removeFromCart = productId => (dispatch, getState) => {
+  dispatch(removeFromCartUnsafe(productId))
+
+}
+
+const removeFromCartUnsafe = productId => ({
+  type: types.REMOVE_FROM_CART,
+  productId
+})
+
 
 
 export const checkout = products => (dispatch, getState) => {

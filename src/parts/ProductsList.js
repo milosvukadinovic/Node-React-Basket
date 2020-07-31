@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-const ProductsList = ({ title, children }) => (
+const ProductsList = ({ name, children }) => (
   <div>
     <h3>{name}</h3>
     <div>{children}</div>
@@ -10,7 +10,7 @@ const ProductsList = ({ title, children }) => (
 
 ProductsList.propTypes = {
   children: PropTypes.node,
-  name: PropTypes.string.isRequired
+  name: PropTypes.string
 }
 
 export default ProductsList

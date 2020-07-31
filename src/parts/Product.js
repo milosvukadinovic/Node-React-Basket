@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import '../style.css'
 
 const Product = ({ price, quantity, name }) => (
-  <div>
-    {name} - &#36;{price}{quantity ? ` x ${quantity}` : null}
+  <div  className="inline-product float-left">
+    <span>{name} - &#36;{price}</span><span className="ml-5">{quantity ? `x ${quantity}` : null}</span>
   </div>
 )
 

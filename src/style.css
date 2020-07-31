@@ -1,0 +1,9 @@
+.inline-product{
+    display:inline;
+    margin:5px;
+}
+
+.list-group{
+    display:inline!important;
+    width: 100%;
+}

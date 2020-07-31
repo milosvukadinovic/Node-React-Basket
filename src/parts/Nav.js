@@ -1,10 +1,10 @@
 import React from 'react';
 import Navbar from 'react-bootstrap/Navbar'
 
- const Nav = ()=>{
+ const Nav = ({title})=>{
     return(
       <Navbar bg="dark" variant="dark" >
-        <Navbar.Brand href="#home">Basket </Navbar.Brand>
+        <Navbar.Brand>{title}</Navbar.Brand>
         
         
       </Navbar>

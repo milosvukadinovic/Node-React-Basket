@@ -4,12 +4,17 @@ import { connect } from 'react-redux'
 import { checkout} from '../actions'
 import { getTotal, getCartProducts } from '../reducers'
 import Cart from './Cart'
+import Modal from 'react-bootstrap/Modal'
 
-const CartContainer = ({ products, total, checkout }) => (
+const CartContainer = ({ products, total, checkout, setTitle }) => (
+  <Modal.Dialog>
+    
   <Cart
     products={products}
     total={total}
-    onCheckoutClicked={() => checkout(products)} />
+    onCheckoutClicked={() => checkout(products)} 
+    setTitle ={setTitle} />
+    </Modal.Dialog>
 )
 
 CartContainer.propTypes = {

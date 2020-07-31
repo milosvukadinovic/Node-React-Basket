@@ -3,15 +3,16 @@ import PropTypes from 'prop-types'
 import Product from './Product'
 import Button from 'react-bootstrap/Button'
 import ListGroup from "react-bootstrap/ListGroup";
+import '../style.css'
 
 const ProductItem = ({ product, onAddToCartClicked }) => (
-  <ListGroup horizontal>
-    <Product
+  <ListGroup horizontal className="m-2">
+    <Product 
       name={product.name}
       price={product.price} />
-    <Button inline
+    <Button className="float-right"
       onClick={onAddToCartClicked}>
-      {'Add to cart'}
+      {'Add to basket'}
     </Button>
     </ListGroup>
 )

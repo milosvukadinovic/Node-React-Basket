@@ -11,12 +11,14 @@ import Nav from 'react-bootstrap/Nav'
 const ProductsContainer = ({ products, addToCart }) => (
   <Modal.Dialog>
   <ProductsList title="Products">
-    {products.map(product =>
-    <Nav fill >
+    
+    { 
+    products.map((product, index) =>
+    <Nav fill key={index}>
 
     
       <ProductItem
-        key={product.sku}
+        key={index}
         product={product}
         onAddToCartClicked={() => addToCart(product.sku)} />
         </Nav>

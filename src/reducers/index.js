@@ -19,8 +19,11 @@ export const getTotal = state =>
     )
     .toFixed(2)
 
-export const getCartProducts = state =>
-  getAddedIds(state).map(id => ({
+export const getCartProducts = state =>{
+  let result = getAddedIds(state).map(id => ({
     ...getProduct(state, id),
     quantity: getQuantity(state, id)
   }))
+  result = result.filter(word => word.sku != undefined);
+  return result;
+}
