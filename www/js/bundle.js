@@ -58583,9 +58583,13 @@ var Cart = function Cart(_ref) {
       )
     );
   }) : _react2.default.createElement(
-    "em",
-    null,
-    "Please add some products to cart."
+    "div",
+    { className: "m-3 text-center" },
+    _react2.default.createElement(
+      "em",
+      null,
+      "Please add some products to cart."
+    )
   );
 
   var callPromoCode = async function callPromoCode() {

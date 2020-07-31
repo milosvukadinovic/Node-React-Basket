@@ -46,7 +46,7 @@ const Cart = ({
       </Nav>
     ))
   ) : (
-    <em>Please add some products to cart.</em>
+    <div className="m-3 text-center"><em>Please add some products to cart.</em></div>
   );
 
   const callPromoCode = async () => {
