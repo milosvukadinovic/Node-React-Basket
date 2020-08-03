@@ -6,6 +6,6 @@ import _products from '../../server/products.json'
 const TIMEOUT = 100
 
 export default {
-  getProducts: (cb, timeout) => setTimeout(() => cb(_products), timeout || TIMEOUT),
-  buyProducts: (payload, cb, timeout) => setTimeout(() => cb(), timeout || TIMEOUT)
+  getProducts: (callback, timeout) => setTimeout(() => callback(_products), timeout || TIMEOUT),
+  buyProducts: (payload, callback, timeout) => setTimeout(() => callback(), timeout || TIMEOUT)
 }

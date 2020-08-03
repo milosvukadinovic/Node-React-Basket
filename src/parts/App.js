@@ -21,7 +21,7 @@ const App = ({ total }) => {
         <Nav title={title}></Nav>
         <div className="float-right mr-3 mt-3">
           <Button onClick={() => changeTitle()}>Basket</Button>
-          {` ` + (total || 0) + ` Item/s`}
+          {` ${(total || 0)} Item/s`}
         </div>
         <ProductsContainer />
         <hr />

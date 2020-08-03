@@ -18,7 +18,7 @@ const addToCartUnsafe = productId => ({
 })
 
 export const addToCart = productId => (dispatch, getState) => {
-    if(productId != undefined && productId != 'undefined'){
+    if(productId !== undefined && productId !== 'undefined'){
       dispatch(addToCartUnsafe(productId))
     }
     
